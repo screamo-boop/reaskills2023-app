@@ -1,0 +1,21 @@
+<h1 style="color: #5e9ca0; text-align: center;">Welcome to simple docker APP</h1>
+<h2 style="color: #2e6c80; text-align: center;">Running in container: {{ hostname }}</h2>
+<h2 style="color: #2e6c80; text-align: center;">With IP: {{ ip }}</h2>
+<h2 style="color: #2e6c80; text-align: center;">Service status:</h2>
+{% if pg_health %}
+<h2 style="color: #00ec2f; text-align: center;">1. Postgres -- {{ pg_health }}</h2>
+{% else %}
+<h2 style="color: #ed0606; text-align: center;">1. Postgres -- {{ pg_health }}</h2>
+{% endif %}
+{% if redis_health %}
+<h2 style="color: #19f800; text-align: center;">2. Redis -- {{ redis_health }}</h2>
+{% else %}
+<h2 style="color: #f00f0f; text-align: center;">2. Redis -- {{ redis_health }}</h2>
+{% endif %}
+<h2 style="color: #2e6c80; text-align: center;">Select the film to watch:</h2>
+<h2 style="color: #2e6c80; text-align: center;"></h2>
+<form method="post" action="/films">
+<h2 style="color: #2e6c80; text-align: center;"><input type="submit" name="show_films" value="Show Films"></h2>
+</form>
+<p>&nbsp;</p>
+<p><strong>&nbsp;</strong></p>
