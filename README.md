@@ -2,7 +2,11 @@
 
 ## Quickstart (develop)
 
+fill out env.example with your data
+
 ```bash
+mv env.example .env
+source .env
 python3 -m venv .venv
 source .venv/bin/activate
 pip3 install --upgrade pip
@@ -12,7 +16,11 @@ flask run
 
 ## Quickstart (production)
 
+fill out env.example with your data
+
 ```bash
+mv env.example .env
+source .env
 python3 -m venv .venv
 source .venv/bin/activate
 pip3 install --upgrade pip
