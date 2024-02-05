@@ -27,7 +27,7 @@ redis_health = False
 def run():
     try:
         conn = psycopg2.connect(
-            dbname=name,
+            dbname=getenv("DB_NAME", name),
             user=dbuser,
             password=dbpassword,
             host=dbhost,
