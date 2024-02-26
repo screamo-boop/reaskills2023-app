@@ -72,3 +72,8 @@ def show_films():
             return flask.render_template("films.html", content=mylist)
     else:
         return flask.render_template("app.html", ip=ip, hostname=hostname)
+
+
+@app.route("/game", methods=["GET", "POST"])
+def play_games():
+    return flask.render_template("game.html")
